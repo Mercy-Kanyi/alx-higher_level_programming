@@ -5,15 +5,17 @@ import sys
 from calculator_1 import add, sub, mul, div
 
 if __name__ == "__main__":
+
     if len(sys.argv) == 4:
+        a, op, b = sys.argv[1:]
         if sys.argv[2] == "+":
-            print("{} {} {} = {}".format(sys.argv[1], sys.argv[2], sys.argv[3], add(int(sys.argv[1]), int(sys.argv[3]))))
+            print("{} {} {} = {}".format(a, op, b, add(int(a), int(b))))
         elif sys.argv[2] == "-":
-            print("{} {} {} = {}".format(sys.argv[1], sys.argv[2], sys.argv[3], sub(int(sys.argv[1]), int(sys.argv[3]))))
+            print("{} {} {} = {}".format(a, op, b, sub(int(a), int(b))))
         elif sys.argv[2] == "*":
-            print("{} {} {} = {}".format(sys.argv[1], sys.argv[2], sys.argv[3], mul(int(sys.argv[1]), int(sys.argv[3]))))
+            print("{} {} {} = {}".format(a, op, b, mul(int(a), int(b))))
         elif sys.argv[2] == "/":
-            print("{} {} {} = {}".format(sys.argv[1], sys.argv[2], sys.argv[3], div(int(sys.argv[1]), int(sys.argv[3]))))
+            print("{} {} {} = {}".format(a, op, b, div(int(a), int(b))))
         else:
             print("Unknown operator. Available operators: +, -, * and /")
             sys.exit(1)
