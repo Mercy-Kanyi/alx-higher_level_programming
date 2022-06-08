@@ -8,4 +8,3 @@ def new_in_list(my_list, idx, element):
     else:
         cp = cp[:idx] + [element] + cp[idx + 1:]
         return cp
-   
