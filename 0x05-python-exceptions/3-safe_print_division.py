@@ -3,9 +3,9 @@
 # a function that divides 2 integers and prints the result
 def safe_print_division(a, b):
     try:
-        quo = a / b
+        var = a / b
     except ZeroDivisionError:
-        quo = None
+        var = None
     finally:
-        print("Insise result: {}".format(quo))
-        return quo
+        print("Inside result: {}".format(var))
+    return var
