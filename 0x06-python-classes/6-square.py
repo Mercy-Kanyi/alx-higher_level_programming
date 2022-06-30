@@ -36,7 +36,7 @@ class Square:
     @position.setter
     def position(self, value):
         """sets the position from the user"""
-        if (type(position) is not tuple or
+        if (type(value) is not tuple or
             len(value) != 2 or
             not all(isinstance(num, int) for num in value) or
                 not all(num >= 0 for num in value)):
