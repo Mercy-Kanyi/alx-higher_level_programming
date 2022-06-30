@@ -9,8 +9,8 @@ class Square:
         """initializes a sqaure with an optional size
         args: size=0:size of the square position:=(0, 0)
         """
-        self.size = size
-        self.position = position
+        self.__size = size
+        self.__position = position
 
     @property
     def size(self):
